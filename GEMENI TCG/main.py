@@ -10,9 +10,10 @@ from hp_func import extract_json;
 #from functions import extract_json, to_markdown, send_data
 
 async def main():
-    # SETUP
+    # SETUP API key
     GOOGLE_API_KEY=os.getenv('GOOGLE_API_KEY')
     genai.configure(api_key=GOOGLE_API_KEY)
+    
     if (genai.get_model == None):
         print("API key is not valid")
     else:
